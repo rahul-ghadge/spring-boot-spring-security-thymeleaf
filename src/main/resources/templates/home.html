@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Security with Thymeleaf</title>
+
+    <div th:replace="fragments/header :: header-css"/>
+
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"/>
+
+<div class="container">
+
+    <div class="starter-template">
+        <h1>Spring Boot Security with Thymeleaf</h1>
+        <h2><a th:href="@{/admin}">Admin page</a></h2>(Only Admins can see this page)
+        <h2><a th:href="@{/user}">User</a></h2>(Users and Admins can see this page)
+        <h2><a th:href="@{/about}">Normal page</a></h2>(Anyone can see this page)
+    </div>
+
+</div>
+<!-- /.container -->
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>
